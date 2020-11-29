@@ -94,7 +94,7 @@
 .v-card {
   height: fit-content;
   width: 400px;
-    padding: 20px;
+  padding: 20px;
 }
 .container {
   height: 100%;

@@ -1,21 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Requests from '../views/Requests.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'requests',
     meta: {layout: 'main'},
-    component: Home
+    component: Requests
   },
   {
     path: '/login',
     name: 'login',
     meta: {layout: 'empty'},
     component: () => import('../views/Login.vue')
+  },
+  {
+    path: '*',
+    meta: {layout: 'empty'},
+    component: () => import('../views/NotFoundComponent')
   }
 ]
 
