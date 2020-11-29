@@ -1,11 +1,12 @@
 <template>
-  <v-container>
-    Главная страница
-  </v-container>
+  <v-app>
+    <v-main class="blue-grey lighten-4">
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-
 export default {
 
 }
