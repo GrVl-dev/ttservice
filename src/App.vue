@@ -19,11 +19,7 @@ export default {
     layout() {
       return (this.$route.meta.layout || 'empty') + '-layout'
     }
-  },
-  
-  data: () => (
-    { drawer: null }
-  )
+  }
 }
 </script>
 

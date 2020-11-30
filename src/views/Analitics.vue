@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    Страница заявок
+    Страница аналитики
   </v-container>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    Страница заявок
+    Страница работников
   </v-container>
 </template>
 

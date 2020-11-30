@@ -18,32 +18,37 @@
     dense
     nav
   >
-    <v-list-item
-      v-for="item in items"
-      :key="item.title"
-      link
+    <v-list-item-group
+      v-model="selectedItem"
     >
-      <v-list-item-icon>
-        <v-icon>{{ item.icon }}</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
+      <v-list-item
+        v-for="item in items"
+        :key="item.title"
+        link :to="item.link"
+      >
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list-item-group>
   </v-list>
 </v-card>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
+      selectedItem: 0,
       items: [
-        { title: 'Заявки', icon: 'mdi-clipboard-list-outline' },
-        { title: 'Объекты', icon: 'mdi-cog' },
-        { title: 'Компании', icon: 'mdi-briefcase-variant-outline' },
-        { title: 'Работники', icon: 'mdi-account-group-outline' },
-        { title: 'Аналитика', icon: 'mdi-chart-line' },
+        { title: 'Заявки', icon: 'mdi-clipboard-list-outline', link: '/' },
+        { title: 'Объекты', icon: 'mdi-cog', link: '/objects' },
+        { title: 'Компании', icon: 'mdi-briefcase-variant-outline', link: '/company' },
+        { title: 'Работники', icon: 'mdi-account-group-outline', link: '/workers' },
+        { title: 'Аналитика', icon: 'mdi-chart-line', link: '/analitics' },
       ],
       right: null,
     }

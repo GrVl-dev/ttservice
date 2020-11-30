@@ -27,8 +27,6 @@ import NavigationMenu from '../components/NavigationMenu.vue'
 export default {
   components: { NavigationMenu },
   name: 'App',
-
-  
   data: () => (
     { drawer: null }
   )

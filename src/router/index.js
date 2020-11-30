@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Requests from '../views/Requests.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +8,31 @@ const routes = [
     path: '/',
     name: 'requests',
     meta: {layout: 'main'},
-    component: Requests
+    component: () => import('../views/Requests')
+  },
+  {
+    path: '/analitics',
+    name: 'analitics',
+    meta: {layout: 'main'},
+    component: () => import('../views/Analitics')
+  },
+  {
+    path: '/company',
+    name: 'company',
+    meta: {layout: 'main'},
+    component: () => import('../views/Company')
+  },
+  {
+    path: '/objects',
+    name: 'objects',
+    meta: {layout: 'main'},
+    component: () => import('../views/Objects')
+  },
+  {
+    path: '/workers',
+    name: 'workers',
+    meta: {layout: 'main'},
+    component: () => import('../views/Workers')
   },
   {
     path: '/login',
