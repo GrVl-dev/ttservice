@@ -45,9 +45,10 @@ export default {
       selectedItem: 0,
       items: [
         { title: 'Заявки', icon: 'mdi-clipboard-list-outline', link: '/' },
-        { title: 'Объекты', icon: 'mdi-cog', link: '/objects' },
+        { title: 'Объекты | оборудование', icon: 'mdi-domain', link: '/objects' },
         { title: 'Компании', icon: 'mdi-briefcase-variant-outline', link: '/company' },
-        { title: 'Работники', icon: 'mdi-account-group-outline', link: '/workers' },
+        { title: 'Сотрудники', icon: 'mdi-account-group-outline', link: '/workers' },
+        { title: 'Материалы', icon: 'mdi-cog', link: '/materials' },
         { title: 'Аналитика', icon: 'mdi-chart-line', link: '/analitics' },
       ],
       right: null,

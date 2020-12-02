@@ -71,7 +71,7 @@
         const errors = []
         if (!this.$v.password.$dirty) return errors
         !this.$v.password.minLength && errors.push('Пароль должен быть не меньше 6 символов')
-        !this.$v.password.required && errors.push('Введите пароль.')
+        !this.$v.password.required && errors.push('Введите пароль')
         return errors
       },
     },

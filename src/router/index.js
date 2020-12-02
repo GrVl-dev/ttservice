@@ -35,6 +35,12 @@ const routes = [
     component: () => import('../views/Workers')
   },
   {
+    path: '/materials',
+    name: 'materials',
+    meta: {layout: 'main'},
+    component: () => import('../views/Materials')
+  },
+  {
     path: '/login',
     name: 'login',
     meta: {layout: 'empty'},
