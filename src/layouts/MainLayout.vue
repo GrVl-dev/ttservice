@@ -11,7 +11,7 @@
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Название в разработке</v-toolbar-title>
+      <v-toolbar-title>{{ pageName }}</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -28,8 +28,15 @@ export default {
   components: { NavigationMenu },
   name: 'App',
   data: () => (
-    { drawer: null }
-  )
+    { 
+      drawer: null
+    }
+  ),
+  computed: {
+    pageName(){
+      return this.$route.meta.pageName
+      }
+  }
 }
 </script>
 

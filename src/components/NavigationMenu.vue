@@ -3,14 +3,14 @@
   class="grey darken-3"
   flat
 >
-  <v-list-item>
-    <v-list-item-content>
+  <v-list-item class="header">
+    <v-list-item-content >
       <v-list-item-title class="title">
-        Рога и копыта
+        ТоргТехникаСервис
       </v-list-item-title>
-      <v-list-item-subtitle>
+      <!-- <v-list-item-subtitle>
         и немного хвостов
-      </v-list-item-subtitle>
+      </v-list-item-subtitle> -->
     </v-list-item-content>
   </v-list-item>
   <v-divider></v-divider>
@@ -44,12 +44,12 @@ export default {
     return {
       selectedItem: 0,
       items: [
-        { title: 'Заявки', icon: 'mdi-clipboard-list-outline', link: '/' },
+        { title: 'Заявки', icon: 'mdi-clipboard-list-outline', link: '/task' },
         { title: 'Объекты | оборудование', icon: 'mdi-domain', link: '/objects' },
         { title: 'Компании', icon: 'mdi-briefcase-variant-outline', link: '/company' },
         { title: 'Сотрудники', icon: 'mdi-account-group-outline', link: '/workers' },
         { title: 'Материалы', icon: 'mdi-cog', link: '/materials' },
-        { title: 'Аналитика', icon: 'mdi-chart-line', link: '/analitics' },
+        { title: 'Аналитика', icon: 'mdi-chart-line', link: '/analitics' }
       ],
       right: null,
     }
@@ -57,6 +57,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.header {
+  text-align: center;
+  height: 64px;
+}
 </style>

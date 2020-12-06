@@ -6,38 +6,60 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'requests',
-    meta: {layout: 'main'},
-    component: () => import('../views/Requests')
+    redirect: '/task'
+  },
+  {
+    path: '/task',
+    name: 'tasks',
+    meta: {
+      layout: 'main',
+      pageName: 'Заявки'
+    },
+    component: () => import('../views/Tasks')
   },
   {
     path: '/analitics',
     name: 'analitics',
-    meta: {layout: 'main'},
+    meta: {
+      layout: 'main',
+      pageName: 'Аналитика'
+    },
     component: () => import('../views/Analitics')
   },
   {
     path: '/company',
     name: 'company',
-    meta: {layout: 'main'},
+    meta: {
+      layout: 'main',
+      pageName: 'Компании'
+    },
     component: () => import('../views/Company')
   },
   {
     path: '/objects',
     name: 'objects',
-    meta: {layout: 'main'},
+    meta: {
+      layout: 'main',
+      pageName: 'Объекты | оборудование'
+    },
     component: () => import('../views/Objects')
   },
   {
     path: '/workers',
     name: 'workers',
-    meta: {layout: 'main'},
+    meta: {
+      layout: 'main',
+      pageName: 'Сотрудники'
+    },
     component: () => import('../views/Workers')
   },
   {
     path: '/materials',
     name: 'materials',
-    meta: {layout: 'main'},
+    meta: {
+      layout: 'main',
+      pageName: 'Материалы'
+    },
     component: () => import('../views/Materials')
   },
   {

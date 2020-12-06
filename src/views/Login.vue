@@ -5,25 +5,27 @@
       outlined
     >
       <v-card-title>Название в разработке</v-card-title>
-      <v-form>
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+      >
         <v-text-field
           v-model="name"
-          :error-messages="nameErrors"
+          :rules="nameRules"
           label="Имя"
           required
-          @input="$v.name.$touch()"
-          @blur="$v.name.$touch()"
         ></v-text-field>
         <v-text-field
           v-model="password"
-          :error-messages="passwordErrors"
+          type="password"
+          :rules="passwordRules"
           :counter="6"
           label="Пароль"
           required
-          @input="$v.password.$touch()"
-          @blur="$v.password.$touch()"
         ></v-text-field>
         <v-btn
+          :disabled="!valid"
           color="indigo accent-4 white--text"
           elevation="6"
           class="mr-4"
@@ -34,7 +36,7 @@
         <v-btn
           color="orange darken-3 white--text"
           elevation="6"
-          @click="clear"
+          @click="reset"
         >
           очистить
         </v-btn>
@@ -44,46 +46,35 @@
 </template>
 
 <script>
-  import { validationMixin } from 'vuelidate'
-  import { required, minLength } from 'vuelidate/lib/validators'
+
 
   export default {
-    mixins: [validationMixin],
-
-    validations: {
-      name: { required },
-      password: { required, minLength: minLength(6) }
-    },
 
     data: () => ({
+      valid: true,
       name: '',
-      password: ''
+      nameRules: [
+        v => !!v || 'Введите имя'
+      ],
+      password: '',
+      passwordRules: [
+        v => !!v || 'Введите пароль',
+        v => (v && v.length >= 6) || 'Пароль должен быть не менее 6 символов'
+      ]
     }),
-
-    computed: {
-      nameErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.required && errors.push('Введите имя')
-        return errors
-      },
-      passwordErrors () {
-        const errors = []
-        if (!this.$v.password.$dirty) return errors
-        !this.$v.password.minLength && errors.push('Пароль должен быть не меньше 6 символов')
-        !this.$v.password.required && errors.push('Введите пароль')
-        return errors
-      },
-    },
-
     methods: {
       submit () {
-        this.$v.$touch()
+        if (this.$refs.form.validate()) {
+          const user = {
+            name: this.name,
+            password: this.password
+          }
+          console.log(user)
+          this.$router.push('/')
+        }
       },
-      clear () {
-        this.$v.$reset()
-        this.name = ''
-        this.password = ''
+      reset () {
+        this.$refs.form.reset()
       }
     }
   }
