@@ -16,28 +16,18 @@
 
         <v-spacer></v-spacer>
         <v-list-item-content >
-          <v-list-item-subtitle class="d-flex align-center">
-            <v-icon
-              small
-              class="pr-2"
-            >
-              mdi-clipboard-list-outline
-            </v-icon>
-            <div>O01222123</div>
-          </v-list-item-subtitle>
-          <v-list-item-subtitle class="d-flex align-center">
-            <v-icon
-              small
-              class="pr-2"
-            >
-              mdi-briefcase-variant-outline
-            </v-icon>
-            <div>ТоргТехникаСервис</div>
-          </v-list-item-subtitle>
           <v-list-item-subtitle
-            style="color: green;"
+            class="d-flex align-center"
+            v-for="data in task.data"
+            :key="data.title"
           >
-            Назначена
+            <v-icon
+              small
+              :class="data.class"
+            >
+              {{ data.icon }}
+            </v-icon>
+            <div>{{ data.title }}</div>
           </v-list-item-subtitle>
         </v-list-item-content>
 
@@ -93,9 +83,7 @@
 <script>
 export default {
   data: () => ({
-    icons: [
-      
-    ]
+
   }),
   props: [
     'task'

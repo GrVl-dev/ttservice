@@ -38,9 +38,9 @@ export default {
           description: 'Не работает какая-то херь'
         },
         data: [
-          {id: 1, title: 'O1230231', icon: 'mdi-clipboard-list-outline'},
-          {id: 2, title: 'ТоргТехникаСервис',icon: 'mdi-briefcase-variant-outline'},
-          {id: 3, status: 'Назначена'}
+          {title: 'O1230231', icon: 'mdi-clipboard-ligitst-outline', class: 'pr-2'},
+          {title: 'ТоргТехникаСервис', icon: 'mdi-briefcase-variant-outline', class: 'pr-2'},
+          {title: 'Назначена', icon: '', class: ''}
         ],
         timing: {
           start: '11.12.2020 12:12',
@@ -56,9 +56,9 @@ export default {
           description: 'Не работает что-то'
         },
         data: [
-          {id: 1, title: 'O1230231', icon: 'mdi-clipboard-list-outline'},
-          {id: 2, title: 'ТоргТехникаСервис',icon: 'mdi-briefcase-variant-outline'},
-          {id: 3, status: 'Назначена'}
+          {title: 'O1908091', icon: 'mdi-clipboard-list-outline', class: 'pr-2'},
+          {title: 'Какая-то контора', icon: 'mdi-briefcase-variant-outline', class: 'pr-2'},
+          {title: 'В работе', icon: '', class: ''}
         ],
         timing: {
           start: '11.12.2020 12:12',
