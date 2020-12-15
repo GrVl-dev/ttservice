@@ -33,39 +33,28 @@ export default {
     tasks: [
       {
         id: 1,
-        equipment: {
-          title: 'Тестовое оборудование',
-          description: 'Не работает какая-то херь'
-        },
-        data: [
-          {title: 'O1230231', icon: 'mdi-clipboard-ligitst-outline', class: 'pr-2'},
-          {title: 'ТоргТехникаСервис', icon: 'mdi-briefcase-variant-outline', class: 'pr-2'},
-          {title: 'Назначена', icon: '', class: ''}
-        ],
-        timing: {
-          start: '11.12.2020 12:12',
-          term: '1 год до завершения',
-          worker: 'Пупкин П.П.',
-          end: '11.12.2020 12:12'
-        }
+        title: 'Тестовое оборудование',
+        description: 'Не работает какая-то херь',
+        number: 'O1230231',
+        company: 'ТоргТехникаСервис',
+        status: 'Назначена',
+        start: '11.12.2020 12:12',
+        term: '1 год до завершения',
+        worker: 'Пупкин П.П.',
+        end: '11.12.2020 12:12'
+        
       },
       {
         id: 2,
-        equipment: {
-          title: 'Новое оборудование',
-          description: 'Не работает что-то'
-        },
-        data: [
-          {title: 'O1908091', icon: 'mdi-clipboard-list-outline', class: 'pr-2'},
-          {title: 'Какая-то контора', icon: 'mdi-briefcase-variant-outline', class: 'pr-2'},
-          {title: 'В работе', icon: '', class: ''}
-        ],
-        timing: {
-          start: '11.12.2020 12:12',
-          term: '1 год до завершения',
-          worker: 'Пупкин П.П.',
-          end: '11.12.2020 12:12'
-        }
+        title: 'Новое оборудование',
+        description: ' А уже не работает какая-то херь',
+        number: 'O12243441',
+        company: 'Какая-то фирмешка',
+        status: 'Назначена',
+        start: '15.12.2020 12:12',
+        term: '1 год до завершения',
+        worker: 'Пупкин П.П.',
+        end: '15.12.2020 12:12'
       },
     ]
   })
